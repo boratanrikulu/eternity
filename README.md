@@ -13,8 +13,9 @@ Website: [eternity.bora.sh](https://eternity.bora.sh)
 
 <div align="center">
 
-</div>
+https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-88aa-21e045ef249d.mp4
 
+</div>
 
 ### Used by
 
