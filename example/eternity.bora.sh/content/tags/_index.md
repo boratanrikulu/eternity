@@ -1,4 +1,0 @@
----
-title: tags
-subtitle: eternity
----
