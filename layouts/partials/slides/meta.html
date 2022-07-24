@@ -1,0 +1,28 @@
+<div class="center">
+    <div class="slide-meta columns is-mobile">
+        {{ $tags := .ctx.Params.tags }}
+        {{ if $tags }}
+            <div class="center column slide-meta-el">
+                <div class="slide-tags">
+                    {{ range $i, $tag := $tags }}
+                        {{ if and (ne $tag "work") (ne $tag "archive") }}
+                            <a class="grey" href="/tags/{{ $tag }}">#{{ $tag }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+
+        {{ if not .ctx.Params.hideDate }}
+            {{ if .ctx.Params.Date }}
+                <div class="center column slide-meta-el grey">
+                    <p>{{ .ctx.Page.Date.Format "January 2, 2006" }}</p>
+                </div>
+            {{ else }}
+                <div class="center column slide-meta-el grey">
+                    <p>{{ with (index $.imgs 0).Exif }}</p>{{ .Date.Format "January 2, 2006" }}</p>{{ end }}</p>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

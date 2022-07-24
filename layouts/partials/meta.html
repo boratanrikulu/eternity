@@ -1,0 +1,39 @@
+<meta name="description" content="{{ if .Params.Subtitle }}{{ .Params.Subtitle }}{{else}}{{ .Site.Params.Subtitle }}{{ end }}" />
+
+<title itemprop="name">{{ default .Site.Title .Title }}</title>
+<meta property="og:title" content="{{ default .Site.Title .Title }}" />
+<meta name="twitter:title" content="{{ default .Site.Title .Title }}" />
+<meta itemprop="name" content="{{ default .Site.Title .Title }}" />
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+<meta name="description" content="{{ default .Site.Params.Subtitle .Params.Subtitle }}" />
+<meta itemprop="description" content="{{ default .Site.Params.Subtitle .Params.Subtitle }}" />
+<meta property="og:description" content="{{ default .Site.Params.Subtitle .Params.Subtitle }}" />
+<meta name="twitter:description" content="{{ default .Site.Params.Subtitle .Params.Subtitle }}" />
+<base href="{{ .RelPermalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+<meta name="url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta name="twitter:card" content="summary" />
+{{ with .Site.Params.Author }}
+    <meta name="twitter:creator" content="{{ . }}" />
+{{ end }}
+{{ $img := slice }}
+{{ if and .Params.images (gt (len .Params.images) 0) }}
+    {{ $scratch := newScratch }}
+    {{ partial "helpers/get" (dict "scratch" $scratch "row" .Params ) }}
+    {{ $img = $scratch.Get "img" }}
+    {{ $img = $img.Resize "1000x" }}
+{{ else if .Site.Params.image }}
+    {{ $scratch := newScratch }}
+    {{ $row := dict "images" (slice .Site.Params.image) }}
+    {{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
+    {{ $img = $scratch.Get "img" }}
+    {{ $img = $img.Resize "1000x" }}
+{{ end }}
+{{ with $img }}
+    <meta itemprop="image" content="{{ .Permalink }}" />
+    <meta property="og:image" content="{{ .Permalink }}" />
+    <meta name="twitter:image" content="{{ .Permalink }}" />
+{{ end }}
+<meta property="og:locale" content="{{ .Language.Lang }}">

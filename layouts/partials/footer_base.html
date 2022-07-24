@@ -1,0 +1,17 @@
+<div class="content has-text-centered">
+    <p>
+        {{ with .Site.Params.Copyright }}
+            {{ . }} <br>
+        {{ end }}
+        {{ with .Site.Params.Author }}
+            © {{ dateFormat "2006" now }}, {{ . }}.
+        {{ end }}
+    </p>
+    {{ if not .Site.Params.DontShowSource}}
+        <p>
+            Made with
+            <a target="_blank" class="source-love" href="https://github.com/boratanrikulu/eternity">Love</a>
+            <i class="fa-solid fa-heart"></i>
+        </p>
+    {{ end }}
+</div>

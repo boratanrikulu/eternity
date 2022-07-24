@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{{ if and .Title (not .IsHome) }}
+		<title>{{ .Title }} {{ if .Params.Subtitle }}- {{ .Params.Subtitle }}{{else}}- {{ .Site.Title }}{{ end }} </title>
+	{{ else }}
+		<title>{{ .Site.Title }} </title>
+	{{ end }}
+	{{ partial "meta" . }}
+
+	<link rel="icon" type="image/png" href=/favicon.ico />
+	<link rel="stylesheet" href="/css/main.css">
+	<script src="/js/main.js"></script>
+	<script src="https://kit.fontawesome.com/bf18cd1a66.js" crossorigin="anonymous"></script>
+</head>
+
+<body>

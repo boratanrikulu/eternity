@@ -1,0 +1,13 @@
+name = "Eternity"
+license = "MIT"
+licenselink = "https://github.com/boratanrikulu/eternity/blob/main/LICENSE"
+description = "Eternity is a minimalist Hugo theme designed for portfolio sites with a fresh feel."
+homepage = "https://github.com/boratanrikulu/eternity"
+demosite = "https://eternity.bora.sh/"
+tags = ["minimal", "clean", "clean", "responsive", "simple", "minimalist", "portfolio"]
+features = ["Multiple Column Usage", "Clean", "Customizable"]
+min_version = "0.41.0"
+
+[author]
+  name = "Bora Tanrikulu"
+  homepage = "https://bora.sh"

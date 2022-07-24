@@ -1,0 +1,101 @@
+.content strong {
+    color: var(--main);
+}
+
+.content .highlight code,
+.content .highlight pre {
+    overflow-y: auto;
+}
+
+.content a strong {
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.content p code,
+.content strong code {
+    color: var(--main);
+    background-color: transparent;
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+.content table {
+    color: var(--dark);
+}
+
+.content blockquote {
+    margin-left: 1rem;
+    border-left: 3px solid;
+    border-color: var(--main);
+    padding-left: 20px;
+}
+
+.content blockquote p {
+    color: var(--white);
+}
+
+.content pre code {
+    color: var(--white);
+}
+
+.content pre,
+.content pre.highlight,
+.content .highlight>pre,
+.content td.code pre {
+    background-color: #FAFAFA;
+    background-image: linear-gradient(var(--dark) 50%, var(--dark-light) 50%);
+    background-repeat: repeat;
+    background-size: 3em 3em;
+    background-position: 0px 10px;
+    border: 1px solid var(--main-light);
+    border-left: 5px solid var(--main-light);
+    border-right: 5px solid var(--main-light);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.0em;
+}
+
+.content table {
+    margin-top: 15px;
+    padding: 0;
+}
+
+.content table tr {
+    border-top: 1px solid #cccccc;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.content table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+.content table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+.content table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+.content table tr th :first-child,
+.content table tr td :first-child {
+    margin-top: 0;
+}
+
+.content table tr th :last-child,
+.content table tr td :last-child {
+    margin-bottom: 0;
+}

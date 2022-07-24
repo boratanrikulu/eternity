@@ -1,0 +1,47 @@
+@media (max-width: 768px) {
+    .slide-info {
+        margin-top: 20px;
+        width: 95%;
+    }
+
+    .image-box {
+        margin-top: 10px;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #mobile.section {
+        padding: 3rem 0.8rem;
+    }
+
+    #mobile.section .column {
+        padding: 0.2rem 0.3rem;
+    }
+
+    .prev,
+    .next {
+        font-size: 36px;
+    }
+
+    section.work .columns .column {
+        padding: 0.5rem;
+    }
+
+    .slide>.columns {
+        width: 100%;
+    }
+
+    .slide-info {
+        margin-left: 0px;
+    }
+
+    .slide-imgs .columns .column:not(:first-child) {
+        margin-left: unset;
+    }
+}

@@ -1,0 +1,65 @@
+@media (max-width: 1024px) {
+    nav.navbar {
+        width: 100%;
+        margin-left: unset;
+        margin-right: unset;
+        display: grid;
+        justify-content: center;
+        height: 15rem;
+        padding: 30px;
+    }
+
+    .slide-info {
+        margin-top: 15px;
+        width: 90%;
+    }
+
+    div.logo {
+        margin-bottom: 15px;
+    }
+
+    .social {
+        margin-top: 15px;
+        margin-right: unset;
+    }
+
+    .welcome-title {
+        margin-left: 0px;
+    }
+
+    .enter {
+        margin-top: unset;
+    }
+
+    .enter>.button {
+        height: 40px;
+        width: 140px;
+        font-size: 1.5em;
+    }
+
+    .navbar-middle {
+        all: unset;
+    }
+
+    .exif {
+        position: relative;
+        float: unset;
+        margin-left: 20px;
+    }
+
+    .socials {
+        width: 95%;
+    }
+
+    .slide-meta {
+        width: 100vw;
+    }
+
+    section.work .columns .column {
+        padding: 0.5rem;
+    }
+
+    .slide>.columns {
+        width: 100%;
+    }
+}

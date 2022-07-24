@@ -1,0 +1,47 @@
+{{ $homeLink := .Site.Params.Homepage }}
+{{ if .IsHome }}
+    {{ $homeLink = "/" }}
+{{ end }}
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-start">
+        <div class="logo">
+            <a href={{ relref . $homeLink }}>
+                <img class="logo" src="/logo.png">
+            </a>
+        </div>
+    </div>
+    <div class="navbar-middle">
+        <a class="a-clean" href={{ relref . $homeLink }}><p class="welcome-title">{{ .Site.Title }}</p></a>
+        {{ if not .IsHome }}
+            {{ if and .Site.Menus .Site.Menus.main }}
+                <div class="menu">
+                    {{ $lastIndex := sub (len .Site.Menus.main) 1 }}
+                    {{ $currentPage := .RelPermalink }}
+                    {{ range $i, $el := .Site.Menus.main }}
+                        {{ $active := "" }}
+                        {{ if eq $el.URL $currentPage }}
+                            {{ $active = "active" }}
+                        {{ end }}
+                        <a class="{{ $active }}" href="{{ $el.URL }}">{{ $el.Name }}</a>
+                        {{ if ne $i $lastIndex }} / {{ end }}
+                    {{ end }}
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+    <div class="navbar-end">
+        <div class="socials">
+            {{ $socials := .Site.Params.socials }}
+            {{ if and .IsHome $socials }}
+                {{ $socials = where $socials "landing" true }}
+            {{ end }}
+            {{ range $el := $socials }}
+                <div class="social">
+                    <a href="{{ $el.url }}" target="_blank">
+                        <i class="{{ $el.icon }}"></i>
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</nav>

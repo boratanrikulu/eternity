@@ -1,0 +1,10 @@
+{{ if not .IsHome }}
+    <footer class="footer">
+        {{ partial "footer_base.html" . }}
+    </footer>
+{{ end }}
+</body>
+
+{{ template "_internal/google_analytics.html" . }}
+{{ template "_internal/google_analytics_async.html" . }}
+</html>
