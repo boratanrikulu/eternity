@@ -82,7 +82,7 @@ cd themes/eternity && git pull && cd -
 
 Eternity is configurable and you can change feature behaviours by setting variables.
 
-Here's a basic post structure. You can basicly use `tags` to which pages will have this post. We suggest to use `work` for home page and `archive` for all posts. (Note: you can change their names too).  
+Here's a basic post structure. You can basically use `tags` to set which pages will have this post. We suggest to use `work` for homepage and `archive` for all posts. (Note: you can change their names too).  
 If you want to create a new page, just add it as a new tag.
 
 ```yaml
@@ -95,7 +95,7 @@ tags:
 ---
 ```
 
-You can set `date` value for your posts. It will be used in Post page and for sorting. If you want, you can use `weight` value for sorting. (Note: if you did not set a `date`. We will check `exif` value of the image to use in post.)
+You can set `date` value for your posts. It will be used in Post page and for posts sorting. If you want, you can use `weight` value for sorting. (Note: if you won't set a `date`, we check `exif` value of the image to use in post.)
 
 ```yaml
 ---
@@ -110,7 +110,7 @@ date: 2022-07-24
 ---
 ```
 
-You can use multiple images by adding them to `images` array. Default view is `row`. But if you want to set them as `column` you can use `multipleColumn` value. Both local images and remote images are supported. If you use remote image, it will be downloaded.
+You can use multiple images by adding them to `images` array. Default view is `row`. But if you want to set them as `column`, you can use `multipleColumn` value. Both local images and remote images are supported. If you use remote image, it will be downloaded.
 
 
 ```yaml
@@ -146,7 +146,7 @@ date: 2022-07-24
 ---
 ```
 
-If you want to hide exif value for a post you can use `hideExif` value. Also there's available `hidetitle` and `hideDate` values. We used that values in about page to be able to create a single page with using same layout.
+If you want to hide exif value for a post, you can use `hideExif` variable. Also there's available `hidetitle` and `hideDate` variables. We used that variables in about page to be able to create a single page with using same layout.
 
 ```yaml
 ---
@@ -164,7 +164,7 @@ hideExif: true
 ---
 ```
 
-You can use `title`, `subtitle`, `url` for the post.
+You can use `title`, `subtitle`, `url` variables for the post.
 
 ```yaml
 ---
@@ -224,7 +224,7 @@ desc:
 
 Example config is here: [**config.yaml**](/config.example.yaml)
 
-You can use `title`, `subtitle` and `image` values for your website. Same variables are available for post pages.
+You can use `title`, `subtitle` and `image` variables for your website. Same variables are available for post pages.
 ```yaml
 title: Eternity
 params:
@@ -232,7 +232,7 @@ params:
   image: '/images/about.png`
 ```
 
-You can use `googleAnalytics` to set Analytics.
+You can use `googleAnalytics` variable to set Analytics.
 ```yaml
 googleAnalytics: ''
 ```
@@ -266,7 +266,7 @@ params:
         people: 1
 ```
 
-You can use `socials` array to set your social accounts. `icon` is font-awesome icon code. You can disable `landing` variable to make icon invisible only for landing page but visible inside website.
+You can use `socials` array to set your social accounts. `icon` is font-awesome icon code. You can use `landing` variable to make icon invisible only for landing page but visible inside website.
 ```yaml
 params:
   socials:
