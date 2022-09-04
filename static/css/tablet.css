@@ -62,4 +62,8 @@
     .slide>.columns {
         width: 100%;
     }
+
+    .work-width {
+        width: unset;
+    }
 }

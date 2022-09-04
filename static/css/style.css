@@ -51,6 +51,15 @@
     margin-right: 20px;
 }
 
+.work {
+    display: grid;
+    justify-items: center;
+}
+
+.work-width {
+    width: var(--desktop-work-width);
+}
+
 .enter {
     display: grid;
     margin-top: 50px;

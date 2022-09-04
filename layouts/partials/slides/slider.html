@@ -1,4 +1,4 @@
-<div class="columns {{ if eq .type "mobile" }} is-mobile is-multiline {{ end }}">
+<div class="columns work-width {{ if eq .type "mobile" }} is-mobile is-multiline {{ end }}">
     {{ if eq (len ($.scratch.Get "posts")) 0 }}
         <div class="column is-half is-offset-one-quarter">
             <div class="notification is-info is-light">
