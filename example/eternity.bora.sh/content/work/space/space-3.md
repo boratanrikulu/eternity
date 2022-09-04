@@ -1,7 +1,7 @@
 ---
 weight: 3
 images:
-- https://source.unsplash.com/random?galaxy&315256528
+- https://source.unsplash.com/random?galaxy&666213726
 title: galaxy 3
 date: 2022-07-23
 tags:
