@@ -1,7 +1,7 @@
 # Eternity
 
 <div align="center">
-	<img src="doc/logo.gif">
+	<img src="https://raw.githubusercontent.com/boratanrikulu/eternity/main/doc/logo.gif">
 	<p>
         Eternity is a minimalist Hugo theme designed for portfolio sites with a fresh feel.
 	</p>
