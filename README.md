@@ -55,12 +55,18 @@ Note: Feel free to add your site here.
 
 3. Submodule the theme.  
 	```shell
+	git init
+	```
+	```shell
 	git submodule add --depth=1 https://github.com/boratanrikulu/eternity.git themes/eternity
 	```  
 
 4. Check [**example/eternity.bora.sh**](/example/eternity.bora.sh/) for example contents and set your [**config.yaml**](/config.example.yaml).  
 	Note: You may just copy example site for testing;  
 	If you will use existing example, be aware about it will download a lot of pictures.
+	```shell
+	rm config.toml # remove default config and use the example's config.
+	```
 	```shell
 	cp -r ./themes/eternity/example/eternity.bora.sh/* .
 	```  
