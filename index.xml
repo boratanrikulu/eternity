@@ -86,5 +86,5 @@ Automaticly creates resized thumbnails.
 Shows exif if it exists.
 Installation Install Hugo.
 Create a new site.
-hugo new site yoursite cd yoursite Submodule the theme.
-git submodule add --depth=1 https://github.com/boratanrikulu/eternity.git themes/eternity Check example/eternity.</description></item></channel></rss>
+hugo new site yoursite cd yoursite Remove default config file.
+rm config.toml Submodule the theme.</description></item></channel></rss>
