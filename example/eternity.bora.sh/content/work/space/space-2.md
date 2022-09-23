@@ -1,7 +1,7 @@
 ---
 weight: 2
 images:
-- https://source.unsplash.com/random?galaxy&152671627
+- https://source.unsplash.com/random?galaxy&490310989
 title: galaxy 2
 date: 2022-07-23
 tags:
