@@ -7,12 +7,12 @@
 
 <section id="desktop" class="section work">
 	{{ partial "helpers/hidden-menu.html" . }}
-	{{ partial "slides/slider" (dict "scratch" $portfolioScratch "type" "desktop") }}
+	{{ partial "slides/slider" (dict "scratch" $portfolioScratch "type" "desktop" "ctx" .) }}
 </section>
 
 <section id="mobile" class="section work">
 	{{ partial "helpers/hidden-menu.html" . }}
-	{{ partial "slides/slider" (dict "scratch" $portfolioMobileScratch "type" "mobile") }}
+	{{ partial "slides/slider" (dict "scratch" $portfolioMobileScratch "type" "mobile" "ctx" .) }}
 </section>
 
 {{ partial "slides/slides" $portfolioScratch }}
