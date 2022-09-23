@@ -43,24 +43,39 @@ hideDate: true
 	cd yoursite
 	```  
 
-3. Submodule the theme.  
+3. Remove default config file.  
+	```shell
+	rm config.toml
+	```  
+
+4. Submodule the theme.  
+	```shell
+	git init
+	```  
 	```shell
 	git submodule add --depth=1 https://github.com/boratanrikulu/eternity.git themes/eternity
 	```  
 
-4. Check [**example/eternity.bora.sh**](https://github.com/boratanrikulu/eternity/tree/main/example/eternity.bora.sh/) for example contents and set your [**config.yaml**](https://github.com/boratanrikulu/eternity/tree/main/config.example.yaml).  
-	Note: You may just copy example site for testing;  
-	If you will use existing example, be aware about it will download a lot of pictures.
-	```shell
-	cp -r ./themes/eternity/example/eternity.bora.sh/* .
-	```  
+5. Create config.yaml;  
+	Apply (1) or (2).  
 
-5. Start the server.
+	1. Use the example project (recommended).  
+		Copy all files from the example project.  
+		```shell
+		cp -r ./themes/eternity/example/eternity.bora.sh/* .
+		```  
+	2. Use empty content.  
+		Copy example config.  
+		```shell
+		cp ./themes/eternity/config.example.yaml ./config.yaml
+		```  
+6. Start the server.
 	```shell
 	hugo serve --port 1313
 	```  
 
-6. Go to [localhost:1313](http://localhost:1313).
+7. Go to [localhost:1313](http://localhost:1313).
+
 
 ### Upgrade
 
