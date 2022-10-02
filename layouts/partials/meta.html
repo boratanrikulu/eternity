@@ -19,7 +19,7 @@
     <meta name="twitter:creator" content="{{ . }}" />
 {{ end }}
 {{ $img := slice }}
-{{ if and .Params.images (gt (len .Params.images) 0) }}
+{{ if .Params.images }}
     {{ $scratch := newScratch }}
     {{ partial "helpers/get" (dict "scratch" $scratch "row" .Params ) }}
     {{ $img = $scratch.Get "img" }}
