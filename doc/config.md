@@ -66,6 +66,12 @@ params:
   homepage: "/work"
 ```
 
+You can bypass welcome page if you want. It redirects "/" to "homepage".
+```yaml
+params:
+  bypassWelcomePage: true
+```
+
 You can use `menu.main` array to set your navbar links.
 ```yaml
 menu:

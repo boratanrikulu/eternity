@@ -1,5 +1,10 @@
 {{ partial "header.html" . }}
 
+{{ if .Site.Params.BypassWelcomePage }}
+<head>
+	<meta http-equiv="refresh" content="0; URL={{ relref . .Site.Params.Homepage }}" />
+</head>
+{{ else }}
 <section class="hero is-fullheight welcome">
 	{{ partial "navbar.html" . }}
 	<div class="hero-body has-text-centered">
@@ -17,5 +22,6 @@
 		{{ partial "footer_base.html" . }}
 	</div>
 </section>
+{{ end }}
 
 {{ partial "footer.html" . }}

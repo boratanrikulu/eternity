@@ -22,6 +22,7 @@ params:
       url: 'mailto:eternity@bora.sh'
       landing: true
   # homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
+  bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
 
 markup:
   defaultMarkdownHandler: goldmark
