@@ -383,3 +383,8 @@ section .column img {
         margin-top: 0;
     }
 }
+
+.tags-list {
+     margin: 0 auto;
+     width: 600px;
+}

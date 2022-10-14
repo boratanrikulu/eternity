@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<div class="tags-list">
+  <h1><center><i class="fas fa-tags"></i> {{ .Title }}</center></h1>
+
+  <!-- create a list with all uppercase letters -->
+  {{ $letters := split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+
+  <!-- range all pages sorted by their title -->
+  <span class="tags">{{ range sort .Site.Taxonomies.tags }}</span><br />
+  <!-- get the first character of each title. Assumes that the title is never empty! -->
+  {{ $firstChar := substr .Page.Title 0 1 | upper }}
+
+  <!-- in case $firstChar is a letter -->
+  {{ if $firstChar | in $letters }}
+    <!-- get the current letter -->
+    {{ $curLetter := $.Scratch.Get "curLetter" }}
+  <!-- if $curLetter isn't set or the letter has changed -->
+  {{ if ne $firstChar $curLetter }}
+    <!-- update the current letter and print it -->
+    {{ $.Scratch.Set "curLetter" $firstChar }}
+
+  <br /><span class="letter">{{ $firstChar }}</span><br />
+  {{ end }}
+
+  <a class="badge badge-tag-list-page" href="{{ .Page.Permalink }}"><i class="fas fa-tags"></i> {{ .Page.Title }} ({{ .Count }})</a>
+  {{ end }}
+  {{ end }}
+</div>
+
+<!-- grabbed from https://gitlab.com/gsalvatovallverdu/gsalvatovallverdu.gitlab.io/-/blob/master/layouts/_default/terms.html -->
+
+{{ partial "footer.html" . }}
