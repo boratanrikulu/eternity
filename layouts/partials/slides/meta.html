@@ -20,9 +20,9 @@
                 </div>
             {{ else }}
                 {{ with (index $.imgs 0).Exif }}
-                    {{ with .Date.Format }}
+                    {{ with .Date }}
                         <div class="center column slide-meta-el grey">
-                            <p>{{ . "January 2, 2006" }}</p>
+                            <p>{{ .Format "January 2, 2006" }}</p>
                         </div>
                     {{ end }}
                 {{ end }}
