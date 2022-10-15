@@ -19,10 +19,13 @@
                     <p>{{ .ctx.Page.Date.Format "January 2, 2006" }}</p>
                 </div>
             {{ else }}
-                <div class="center column slide-meta-el grey">
-                    <p>{{ with (index $.imgs 0).Exif }}{{ .Date.Format "January 2, 2006" }}</p>
+                {{ with (index $.imgs 0).Exif }}
+                    {{ with .Date.Format }}
+                        <div class="center column slide-meta-el grey">
+                            <p>{{ . "January 2, 2006" }}</p>
+                        </div>
                     {{ end }}
-                </div>
+                {{ end }}
             {{ end }}
         {{ end }}
     </div>
