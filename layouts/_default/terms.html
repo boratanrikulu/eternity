@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<section class="section work">
+	{{ partial "helpers/hidden-menu.html" . }}
+
+	<div class="columns is-multiline mt-2">
+		{{ range sort .Site.Taxonomies.tags "Count" "desc" }}
+			<div class="column is-half center">
+				<div class="slide-tag">
+					<a href="{{ .Page.Permalink }}">
+						<i class="fas fa-tags"></i>
+						{{ .Page.Title }} ({{ .Count }})
+					</a>
+				</div>
+			</div>
+		{{ end }}
+	</div>
+</section>
+
+{{ partial "footer.html" . }}

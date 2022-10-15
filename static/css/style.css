@@ -264,6 +264,10 @@ section .column img {
     padding-left: 3px;
 }
 
+.slide-tag {
+    font-size: medium;
+}
+
 .grey {
     color: var(--grey);
 }
