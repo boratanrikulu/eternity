@@ -6,7 +6,7 @@
                 <div class="slide-tags">
                     {{ range $i, $tag := $tags }}
                         {{ if and (ne $tag "work") (ne $tag "archive") }}
-                            <a class="grey" href="/tags/{{ $tag }}">#{{ $tag }}</a>
+                            <a class="grey" href={{ printf "tags/%s" $tag | absURL }}>#{{ $tag }}</a>
                         {{ end }}
                     {{ end }}
                 </div>
