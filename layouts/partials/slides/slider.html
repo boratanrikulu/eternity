@@ -24,14 +24,20 @@
                     {{ $scratch := newScratch }}
                     {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
                     {{ $img := $scratch.Get "img" }}
+                    {{ $resizer := "1000x r0" }}
+                    {{ with $img.Exif }}
+                        {{ if eq .Tags.Orientation 6 }}
+                            {{ $resizer = "1000x r270" }}
+                        {{ end }}
+                    {{ end }}
                     {{ if and (eq $.type "desktop") (gt ($.scratch.Get "columnsCount") 2) }}
                         {{ if gt $img.Width 1000 }}
-                            {{ $img = $img.Resize "1000x" }}
+                            {{ $img = $img.Resize $resizer }}
                         {{ end }}
                     {{ end }}
                     {{ if and (eq $.type "mobile") (gt ($.scratch.Get "columnsCount") 1) }}
                         {{ if gt $img.Width 1000 }}
-                            {{ $img = $img.Resize "1000x" }}
+                            {{ $img = $img.Resize $resizer }}
                         {{ end }}
                     {{ end }}
                     <div class="center">
