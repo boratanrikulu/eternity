@@ -1,8 +1,10 @@
 ---
 weight: 5
 images:
-- https://source.unsplash.com/random?people&26027020
+- https://source.unsplash.com/random?people&3312239
+- https://source.unsplash.com/random?people&127761
 title: people 5
+multipleColumn: true
 date: 2022-07-23
 tags:
 - work # homepage

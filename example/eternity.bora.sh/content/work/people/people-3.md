@@ -1,11 +1,9 @@
 ---
-weight: 3
+weight: 1
 images:
-- https://source.unsplash.com/random?people&33331807
-title: people 3
+- https://source.unsplash.com/random?people&412322231212312
 date: 2022-07-23
 tags:
-- archive # all posts
 - people
 ---
 

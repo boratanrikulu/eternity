@@ -1,7 +1,7 @@
 ---
 weight: 1
 images:
-- https://source.unsplash.com/random?galaxy&804615510
+- https://source.unsplash.com/random?galaxy&8046112315510
 title: galaxy 1
 date: 2022-07-23
 tags:
