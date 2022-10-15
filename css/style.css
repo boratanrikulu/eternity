@@ -6,7 +6,7 @@
 /* WELCOME */
 
 .welcome {
-    background-image: url("/background.jpeg");
+    /* background-image: url("/background.jpeg"); It was moved to inline css. */
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -264,6 +264,10 @@ section .column img {
     padding-left: 3px;
 }
 
+.slide-tag {
+    font-size: medium;
+}
+
 .grey {
     color: var(--grey);
 }
@@ -340,7 +344,7 @@ section .column img {
 }
 
 .slide-imgs .columns .column {
-    padding: unset;
+    padding: 0.10rem;
 }
 
 .slide-imgs .columns .column:not(:first-child) {
