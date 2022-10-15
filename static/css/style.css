@@ -264,6 +264,10 @@ section .column img {
     padding-left: 3px;
 }
 
+.slide-tag {
+    font-size: medium;
+}
+
 .grey {
     color: var(--grey);
 }
@@ -382,9 +386,4 @@ section .column img {
     100% {
         margin-top: 0;
     }
-}
-
-.tags-list {
-     margin: 0 auto;
-     width: 600px;
 }
