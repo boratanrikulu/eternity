@@ -260,6 +260,10 @@ section .column img {
     width: 100%;
 }
 
+.tags-list {
+    width: 700px;
+}
+
 .slide-tags {
     padding-left: 3px;
 }
