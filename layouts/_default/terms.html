@@ -5,17 +5,25 @@
 <section class="section work">
 	{{ partial "helpers/hidden-menu.html" . }}
 
-	<div class="columns is-multiline mt-2">
-		{{ range sort .Site.Taxonomies.tags "Count" "desc" }}
-			<div class="column is-half center">
-				<div class="slide-tag">
-					<a href="{{ .Page.Permalink }}">
-						<i class="fas fa-tags"></i>
-						{{ .Page.Title }} ({{ .Count }})
-					</a>
+	<div class="center">
+		<div class="slide-info">
+			<div class="content">
+				<div class="columns is-multiline mt-2">
+					{{ range sort .Site.Taxonomies.tags "Count" "desc" }}
+						<div class="column is-half">
+							<div class="slide-tag center">
+								<p>
+									<a href="{{ .Page.Permalink }}">
+										<i class="fas fa-tags"></i>
+										{{ .Page.Title }} ({{ .Count }})
+									</a>
+								</p>
+							</div>
+						</div>
+					{{ end }}
 				</div>
 			</div>
-		{{ end }}
+		</div>
 	</div>
 </section>
 
