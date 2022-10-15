@@ -20,31 +20,58 @@
         <div class="column">
             {{ $column := ($.scratch.Get (printf "%d" $index)) }}
             {{ range $row := $column }}
-                {{ if (index $row "post").Params.images }}
-                    {{ $scratch := newScratch }}
-                    {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
-                    {{ $img := $scratch.Get "img" }}
-                    {{ if and (eq $.type "desktop") (gt ($.scratch.Get "columnsCount") 2) }}
-                        {{ if gt $img.Width 1000 }}
-                            {{ $img = $img.Resize "1000x" }}
+                {{ if or ((index $row "post").Params.images) ((index $row "post").Resources.ByType "image") }}
+                    {{ if ((index $row "post").Params.images) }}
+                        {{ $scratch := newScratch }}
+                        {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
+                        {{ $img := $scratch.Get "img" }}
+                        {{ if and (eq $.type "desktop") (gt ($.scratch.Get "columnsCount") 2) }}
+                            {{ if gt $img.Width 1000 }}
+                                {{ $img = $img.Resize "1000x" }}
+                            {{ end }}
                         {{ end }}
-                    {{ end }}
-                    {{ if and (eq $.type "mobile") (gt ($.scratch.Get "columnsCount") 1) }}
-                        {{ if gt $img.Width 1000 }}
-                            {{ $img = $img.Resize "1000x" }}
+                        {{ if and (eq $.type "mobile") (gt ($.scratch.Get "columnsCount") 1) }}
+                            {{ if gt $img.Width 1000 }}
+                                {{ $img = $img.Resize "1000x" }}
+                            {{ end }}
                         {{ end }}
-                    {{ end }}
-                    <div class="center">
-                        <div class="image-box {{ if eq ($.scratch.Get "columnsCount") 1 }} alittle {{ end }}">
-                            <img
-                            src="{{ $img.RelPermalink }}"
-                            loading="lazy"
-                            width="{{ $img.Width }}"
-                            height="{{ $img.Height }}"
-                            onclick="openSlider();currentSlide({{ (index $row "loopCount") }})"
-                            />
+                        <div class="center">
+                            <div class="image-box {{ if eq ($.scratch.Get "columnsCount") 1 }} alittle {{ end }}">
+                                <img
+                                src="{{ $img.RelPermalink }}"
+                                loading="lazy"
+                                width="{{ $img.Width }}"
+                                height="{{ $img.Height }}"
+                                onclick="openSlider();currentSlide({{ (index $row "loopCount") }})"
+                                />
+                            </div>
                         </div>
-                    </div>
+                    {{ else }}
+                        {{ $scratch := newScratch }}
+                        {{ $scratch.Set "img" (index ((index $row "post").Resources.ByType "image") 0) }}
+                        {{ $img := $scratch.Get "img" }}
+                        {{ if and (eq $.type "desktop") (gt ($.scratch.Get "columnsCount") 2) }}
+                            {{ if gt $img.Width 1000 }}
+                                {{ $img = $img.Resize "1000x" }}
+                            {{ end }}
+                        {{ end }}
+                        {{ if and (eq $.type "mobile") (gt ($.scratch.Get "columnsCount") 1) }}
+                            {{ if gt $img.Width 1000 }}
+                                {{ $img = $img.Resize "1000x" }}
+                            {{ end }}
+                        {{ end }}
+                        <div class="center">
+                            <div class="image-box {{ if eq ($.scratch.Get "columnsCount") 1 }} alittle {{ end }}">
+                                <img
+                                src="{{ $img.RelPermalink }}"
+                                loading="lazy"
+                                width="{{ $img.Width }}"
+                                height="{{ $img.Height }}"
+                                onclick="openSlider();currentSlide({{ (index $row "loopCount") }})"
+                                />
+                            </div>
+                        </div>
+                    {{ end }}
                 {{ end }}
             {{ end }}
         </div>
