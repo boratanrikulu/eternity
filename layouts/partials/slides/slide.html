@@ -2,8 +2,26 @@
 {{ range $i, $image := .ctx.Params.images }}
 	{{ $scratch := newScratch }}
 	{{ $row := dict "images" (slice $image) }}
+    <div>row: {{ $row }}</div>
+    <div>scratch: {{ $scratch }}</div>
 	{{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
+    <div>scratch: {{ $scratch }}</div>
 	{{ $imgs = $imgs | append ($scratch.Get "img") }}
+    {{ $imgs }}
+{{ end }}
+
+<div>Bundle images:</div>
+
+{{ with .ctx.Resources.ByType "image" }}
+{{ range . }}
+<div>{{ .RelPermalink }}</div>
+	{{ $scratch := newScratch }}
+	{{ $row := dict "images" (slice .RelPermalink) }}
+    {{ $scratch.Set "img" (.) }}
+    <div>scratch: {{ $scratch }}</div>
+	{{ $imgs = $imgs | append ($scratch.Get "img") }}
+    {{ $imgs }}
+{{ end }}
 {{ end }}
 
 {{ $includesInfo := false }}
