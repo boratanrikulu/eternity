@@ -261,7 +261,7 @@ section .column img {
 }
 
 .tags-list {
-    width: 700px;
+    width: 100%;
 }
 
 .slide-tags {

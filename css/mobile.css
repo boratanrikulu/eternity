@@ -44,8 +44,4 @@
     .slide-imgs .columns .column:not(:first-child) {
         margin-left: unset;
     }
-
-    .tags-list {
-        width: 100%;
-    }
 }
