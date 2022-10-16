@@ -1,5 +1,5 @@
 @import "bulma.min.css";
-@import "fonts.css";
+/* @import "fonts.css"; Moved to /layouts/partials/fonts.html */
 @import "base.css";
 @import "colors.css";
 @import "width.css";
