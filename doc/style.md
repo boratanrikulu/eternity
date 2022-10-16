@@ -1,7 +1,20 @@
-### Editing default statics
+### Edit default statics
 
-Hugo allows to edit statics when you use a theme. We suggest to replace this statics [**/static/logo.png**](/static/logo.png), [**/static/background.jpeg**](static/background.jpeg), [**/static/CNAME**](/static/CNAME), [**/static/favicon.ico**](/static/favicon.ico). You can also change used colors, [**/static/css/colors.css**](/static/css/colors.css). You just need to create static folder inside your project and put the statics. Do not edit theme directly, otherwise it may break your upgrade in future.
+Hugo allows you to edit statics when you use a theme. So, you can overwrite any file.  
 
-### Editing default width value
+We suggest to replace these statics; [**/static/logo.png**](/static/logo.png), [**/static/background.jpeg**](/static/background.jpeg), [**/static/CNAME**](/static/CNAME), [**/static/favicon.ico**](/static/favicon.ico).  
 
-Check [**/static/css/width.css**](/static/css/width.css) to be able to change default value.
+You just need to create related file(s) inside your project. They should be in same path.  
+Do not edit the theme directly, otherwise it may break your upgrade in future.
+
+### Change colors
+
+Create [**/static/css/colors.css**](/static/css/colors.css) in your repo to be able to change colors used in the theme.
+
+### Change width value
+
+Create [**/static/css/width.css**](/static/css/width.css) in your repo to be able to change width value.
+
+### Change font
+
+Create [**/layouts/partials/fonts.html**](/layouts/partials/fonts.html) in your repo to be able to change fonts.
