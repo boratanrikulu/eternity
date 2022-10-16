@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+{{ $numberofnewcontents := 5 }}
+
+<div class="new-list">
+  <h1><center><i class="fas fa-tags"></i> The {{ $numberofnewcontents }} Last Contents Published</center></h1>
+
+{{ range $section, $taxonomy := .Site.Sections }}
+    <ul>
+        {{ range first $numberofnewcontents $taxonomy.Pages.ByPublishDate.Reverse }}
+        <!--<li>- <a href="{{ .Permalink}}"> {{ .LinkTitle }}</a> (<span class="date">{{ .Date.Format "2 January 2006" }}</span>)</a></li>-->
+				<li>{{ partial "slides/slide_new.html" (dict "disableFullheight" true "ctx" .) }}</li>
+        {{ end }}
+    </ul>
+{{ end }}
+</div>
+
+{{ partial "footer.html" . }}

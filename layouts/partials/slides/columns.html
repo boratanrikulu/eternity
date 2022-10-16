@@ -1,4 +1,4 @@
-<!-- 
+<!--
     Returns all needed posts by supporting multiple column for multiple devices.
 
     Usage example:
@@ -28,14 +28,14 @@
 	{{ end }}
 	{{ if not $columnsCount }}
 		<!-- default value doesn't exist in config.yaml -->
-		{{ $columnsCount = 3 }} 
+		{{ $columnsCount = 3 }}
 	{{ end }}
 {{ end }}
 
 {{ $posts := slice }}
 {{ if .ctx.Site.Taxonomies.tags }}
 	{{ $posts = index .ctx.Site.Taxonomies.tags .ctx.Params.Title }}
-	{{ $posts = sort $posts ".Params.weight" "desc" }}
+	{{ $posts = sort $posts ".Params.weight" "asc" }}
 {{ end }}
 
 {{ $postsCount := len ($posts) }}
