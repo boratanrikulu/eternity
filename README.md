@@ -22,10 +22,21 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**cankalay.com**](https://cankalay.com)  
   A photographer website.
 
+- [**www.twosmallbirds.art**](https://www.twosmallbirds.art)  
+  An illustrator website.
+
+- [**www.lucywingard.com**](https://www.lucywingard.com)  
+  A ceramic artist website.
+
+- [**emily5.com**](https://emily5.com)  
+  A graphic designer website.
+
 - [**jwst.rocks**](https://jwst.rocks)  
   Basic website contains WEBB images.
 
-Note: Feel free to add your site here.
+*Feel free to add your site here.*  
+
+Note: If you're an artist who wants to host a website but doesn't have know how to, I can help you about technical questions for free. Just send an email to [**eternity@bora.sh**](mailto:eternity@bora.sh), I will assist you first.
 
 ### Features
 
