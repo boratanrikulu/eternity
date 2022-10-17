@@ -65,6 +65,3 @@ menu:
     - name: about
       url: /about/
       weight: 5
-    - name: tags
-      url: /tags/
-      weight: 6
