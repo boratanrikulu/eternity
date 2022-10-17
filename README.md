@@ -92,7 +92,7 @@ Note: If you're an artist who wants to host a website but doesn't have know how 
 		```  
 6. Start the server.
 	```shell
-	hugo serve --port 1313
+	hugo server --port 1313
 	```  
 
 7. Go to [localhost:1313](http://localhost:1313).
