@@ -1,5 +1,5 @@
 {{ $homeLink := .Site.Params.Homepage }}
-{{ if .IsHome }}
+{{ if not .IsHome }}
     {{ $homeLink = "/" }}
 {{ end }}
 <nav class="navbar" role="navigation" aria-label="main navigation">
