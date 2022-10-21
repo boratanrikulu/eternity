@@ -23,6 +23,7 @@ params:
       landing: true
   # homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
   bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
+  plausible: '' # todo: set your plausible id.
 
 markup:
   defaultMarkdownHandler: goldmark
