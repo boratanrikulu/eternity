@@ -1,7 +1,7 @@
 ---
 weight: 4
 images:
-- https://source.unsplash.com/random?telescope&152912311316154
+- https://source.unsplash.com/random?telescope&1082223176
 title: galaxy 5
 date: 2022-07-23
 tags:

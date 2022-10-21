@@ -1,8 +1,10 @@
 ---
 weight: 9
 images:
-- https://source.unsplash.com/random?people&1649630128
+- https://source.unsplash.com/random?people&867227759
+- https://source.unsplash.com/random?people&92322
 title: people 9
+multipleColumn: true
 date: 2022-07-23
 tags:
 - archive # all posts
