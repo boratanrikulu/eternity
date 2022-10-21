@@ -36,6 +36,7 @@ params:
   homepage: "/work" # homepage link, mostly same with menu.main[0]
   bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
   plausible: 'eternity.bora.sh' # todo: set your plausible id.
+  disableRadius: false
 
 markup:
   defaultMarkdownHandler: goldmark
