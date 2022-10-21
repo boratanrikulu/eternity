@@ -20,7 +20,10 @@
 						<div class="column">
 							<a href="{{ .url }}">
 								<div class="image-box">
-									{{ $image := resources.Get .image }}
+									{{ $scratch := newScratch }}
+									{{ $row := dict "images" (slice .image) }}
+									{{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
+									{{ $image := $scratch.Get "img" }}
 									{{ with $image }}
 									<img src="{{ $image.RelPermalink }}" loading="lazy" />
 									{{end}}
