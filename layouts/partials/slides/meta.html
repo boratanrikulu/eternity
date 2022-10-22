@@ -16,13 +16,13 @@
         {{ if not .ctx.Params.hideDate }}
             {{ if .ctx.Params.Date }}
                 <div class="center column slide-meta-el grey">
-                    <p>{{ .ctx.Page.Date.Format "January 2, 2006" }}</p>
+                    <p>{{ .ctx.Page.Date | time.Format ":date_long" }}</p>
                 </div>
             {{ else }}
                 {{ with (index $.imgs 0).Exif }}
                     {{ with .Date }}
                         <div class="center column slide-meta-el grey">
-                            <p>{{ .Format "January 2, 2006" }}</p>
+                            <p>{{ . | time.Format ":date_long" }}</p>
                         </div>
                     {{ end }}
                 {{ end }}

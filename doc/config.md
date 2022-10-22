@@ -15,6 +15,12 @@ You can use `googleAnalytics` variable to set Analytics.
 googleAnalytics: ''
 ```
 
+You can use `plausible` variable to set Plausible.
+```yaml
+params:
+  plausible: ''
+```
+
 You can use `copyright` and `author` variables to set Copyright notice.
 ```yaml
 params:
@@ -70,6 +76,12 @@ You can bypass welcome page if you want. It redirects "/" to "homepage".
 ```yaml
 params:
   bypassWelcomePage: true
+```
+
+You can disable logo's radius with `disableRadius` variable.
+```yaml
+params:
+  disableRadius: true
 ```
 
 You can use `menu.main` array to set your navbar links.
