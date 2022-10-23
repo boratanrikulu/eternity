@@ -14,6 +14,26 @@
 				<button onclick="window.location.href='{{ relref . .Site.Params.Homepage }}'"
 				class="button is-white is-large is-outlined">enter</button>
 			</div>
+			<div class="enter">
+				<div class="columns">
+					{{ range .Params.FeaturedTags }}
+						<div class="column">
+							<a href="{{ .url }}">
+								<div class="image-box">
+									{{ $scratch := newScratch }}
+									{{ $row := dict "images" (slice .image) }}
+									{{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
+									{{ $image := $scratch.Get "img" }}
+									{{ with $image }}
+									<img src="{{ $image.RelPermalink }}" loading="lazy" />
+									{{end}}
+									<h3>{{ .title }}</h3>
+								</div>
+							</a>
+						</div>
+					{{ end }}
+				</div>
+			</div>
 			{{ range $d := .Params.Desc }}
 				<p>{{ $d }}</p>
 			{{ end }}
