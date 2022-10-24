@@ -22,6 +22,9 @@ params:
       url: 'mailto:eternity@bora.sh'
       landing: true
   # homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
+  specialPages:
+    - work
+    - archive
   bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
   plausible: '' # todo: set your plausible id.
   disableRadius: false

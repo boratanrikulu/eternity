@@ -72,6 +72,14 @@ params:
   homepage: "/work"
 ```
 
+You can change special page names.
+```yaml
+params:
+  specialPages:
+    - work
+    - archive
+```
+
 You can bypass welcome page if you want. It redirects "/" to "homepage".
 ```yaml
 params:
