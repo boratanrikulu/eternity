@@ -140,3 +140,14 @@ desc:
 - designed for portfolio sites with a fresh feel.
 ---
 ```
+
+For landing page (_index.md), you can use `featuredTags` array to show some tags in Landing Page.
+```yaml
+featuredTags:
+  - title: people
+    image: https://source.unsplash.com/random?people&1649630128
+    url: /tags/people/
+  - title: nature
+    image: https://source.unsplash.com/random?nature&17346933
+    url: /tags/nature/
+```

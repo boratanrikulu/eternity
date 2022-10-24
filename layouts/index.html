@@ -14,9 +14,9 @@
 				<button onclick="window.location.href='{{ relref . .Site.Params.Homepage }}'"
 				class="button is-white is-large is-outlined">enter</button>
 			</div>
-			<div class="enter">
-				<div class="columns">
-					{{ range .Params.FeaturedTags }}
+			{{ with .Params.FeaturedTags }}
+				<div class="columns is-mobile is-multiline">
+					{{ range . }}
 						<div class="column">
 							<a href="{{ .url }}">
 								<div class="image-box">
@@ -27,13 +27,13 @@
 									{{ with $image }}
 									<img src="{{ $image.RelPermalink }}" loading="lazy" />
 									{{end}}
-									<h3>{{ .title }}</h3>
 								</div>
+								<p>{{ .title }}</p>
 							</a>
 						</div>
 					{{ end }}
 				</div>
-			</div>
+			{{ end }}
 			{{ range $d := .Params.Desc }}
 				<p>{{ $d }}</p>
 			{{ end }}
