@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const path = window.location.href
 
 let currentScroll = 0
+let slide;
 
 function openSlider() {
-    currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    document.body.classList.add("noscroll");
+    currentScroll = scrollPosition();
     document.getElementById('slider').style.display = "grid";
     document.addEventListener('keydown', keyboardSlider);
 }
@@ -31,6 +31,7 @@ function closeSlider() {
     if (history.replaceState) {
         history.replaceState({}, path, path);
     }
+    slide = null;
     document.body.classList.remove("noscroll");
     window.scrollTo(0, currentScroll);
 }
@@ -44,26 +45,27 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var slide = document.getElementsByClassName("slide");
-    if (n > slide.length) {
-        slideIndex = 1
+    var slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {
+        slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slide.length
+        slideIndex = slides.length;
     }
-    for (i = 0; i < slide.length; i++) {
-        slide[i].style.display = "none";
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    slide = slides[slideIndex - 1];
     if (history.replaceState) {
-        history.replaceState({}, path, slide[slideIndex - 1].getAttribute("path"));
+        history.replaceState({}, path, slide.getAttribute("path"));
     }
-    if (slide[slideIndex - 1].getAttribute("info") != "true") {
+    if (slide.getAttribute("info") != "true") {
         document.getElementById('arrow').style.display = "none";
     } else {
         document.getElementById('arrow').style.display = "block";
     }
-    slide[slideIndex - 1].scrollTo(0, 0)
-    slide[slideIndex - 1].style.display = "flex";
+    slide.scrollTo(0, 0);
+    slide.style.display = "flex";
 }
 
 function keyboardSlider(event) {
@@ -73,6 +75,39 @@ function keyboardSlider(event) {
     if (event.key == "ArrowRight") {
         plusSlides(+1);
     } else if (event.key === "Escape") {
-        closeSlider()
+        closeSlider();
     }
 }
+
+function hideArrow() {
+    if (slide) {
+        let contents = slide.getElementsByClassName("content");
+        if (contents) {
+            let arrow = document.getElementById('arrow');
+            if (isElInDom(contents[0])) {
+                arrow.classList.add("hidden");
+            } else {
+                arrow.classList.remove("hidden");
+            }
+        }
+    }
+}
+
+function scrollPosition() {
+    return document.documentElement.scrollTop || document.body.scrollTop;
+}
+
+function isElInDom (el) {
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+function checkArrow() {
+    hideArrow();
+    setTimeout(checkArrow, 100);
+}
+
+checkArrow();
