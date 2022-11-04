@@ -38,7 +38,7 @@ params:
     - work
     - archive
   bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
-  plausible: 'eternity.bora.sh' # todo: set your plausible id.
+  plausible: '' # todo: set your plausible id.
   disableRadius: false
 
 markup:
