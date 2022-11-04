@@ -3,7 +3,9 @@
 	    {{ partial "slides/slide.html" (dict "disableFullheight" false "ctx" $post) }}
 	{{ end }}
 	<div id="arrow" class="down-arrow"></div>
-	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	<div class="navigate">
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
 	<button onclick="closeSlider()" class="modal-close" aria-label="close"></button>
 </div>

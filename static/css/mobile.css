@@ -26,7 +26,7 @@
 
     .prev,
     .next {
-        font-size: 36px;
+        font-size: 24px;
     }
 
     section.work .columns .column {
@@ -43,5 +43,24 @@
 
     .slide-imgs .columns .column:not(:first-child) {
         margin-left: unset;
+    }
+
+    .navigate {
+        width: 100%;
+        border-radius: unset;
+        bottom: 0px;
+        right: unset;
+        height: 75px;
+    }
+
+    .prev, .next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .down-arrow {
+        top: calc(100vh - 150px);
     }
 }
