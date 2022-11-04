@@ -21,6 +21,7 @@ let slide;
 
 function openSlider() {
     currentScroll = scrollPosition();
+    document.body.classList.add("noscroll");
     document.getElementById('slider').style.display = "grid";
     document.addEventListener('keydown', keyboardSlider);
 }
