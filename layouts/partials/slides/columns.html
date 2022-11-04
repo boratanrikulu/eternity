@@ -77,6 +77,9 @@
 		{{ $mobileColumnsCount = 2 }} <!-- set hard-coded default value -->
 	{{ end }}
 {{ end }}
+{{ if lt $postsCount $mobileColumnsCount}}
+	{{ $mobileColumnsCount = $postsCount }}
+{{ end }}
 {{ $.portfolioMobileScratch.Set "columnsCount" $mobileColumnsCount }}
 {{ $.portfolioMobileScratch.Set "posts" $posts }}
 {{ $loopCount := 1 }}
