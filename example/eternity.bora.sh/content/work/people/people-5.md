@@ -12,7 +12,7 @@ tags:
 - people
 ---
 
-# Markdown
+## Markdown
 
 You can use **Markdown** format to write **your story**.
 
@@ -20,7 +20,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum 
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum impedit doloremque ducimus repellat sapiente aut qui quae provident, cum vitae atque eius earum labore. Quae quod rem aliquid!
 
-## Subtitle
+### Subtitle
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum impedit doloremque ducimus repellat sapiente aut qui quae provident, cum vitae atque eius earum labore. Quae quod rem aliquid!
 
