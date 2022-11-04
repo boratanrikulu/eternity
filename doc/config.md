@@ -92,6 +92,12 @@ params:
   disableRadius: true
 ```
 
+You can move Title and Meta down, to show them only when scroll.  
+```yaml
+params:
+  moveIt: true
+```
+
 You can use `menu.main` array to set your navbar links.
 ```yaml
 menu:

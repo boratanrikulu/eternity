@@ -63,4 +63,8 @@
     .down-arrow {
         top: calc(100vh - 150px);
     }
+
+    .slide-imgs {
+        padding-bottom: 20px;
+    }
 }

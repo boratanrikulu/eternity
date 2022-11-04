@@ -234,7 +234,6 @@ a img {
     display: grid;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
 }
 
 .fullheight {
@@ -303,6 +302,10 @@ section .column img {
     text-align: center;
     height: 70px;
     font-size: x-large;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .center {
