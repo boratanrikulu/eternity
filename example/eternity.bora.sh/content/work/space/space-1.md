@@ -1,7 +1,7 @@
 ---
 weight: 1
 images:
-- https://source.unsplash.com/random?galaxy&7826133
+- https://source.unsplash.com/random?galaxy&5568
 title: galaxy 1
 date: 2022-07-23
 tags:
@@ -9,7 +9,7 @@ tags:
 - space
 ---
 
-# Markdown
+## Markdown
 
 You can use **Markdown** format to write **your story**.
 
@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum 
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum impedit doloremque ducimus repellat sapiente aut qui quae provident, cum vitae atque eius earum labore. Quae quod rem aliquid!
 
-## Subtitle
+### Subtitle
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum impedit doloremque ducimus repellat sapiente aut qui quae provident, cum vitae atque eius earum labore. Quae quod rem aliquid!
 

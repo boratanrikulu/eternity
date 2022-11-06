@@ -116,11 +116,11 @@ tags:
 date: 2022-07-24
 ---
 
-# Markdown
+## Markdown
 
 You can use **Markdown** format to write **your story**.
 
-## Subtitle
+### Subtitle
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem, laborum impedit doloremque ducimus repellat sapiente aut qui quae provident, cum vitae atque eius earum labore. Quae quod rem aliquid!
 
@@ -139,4 +139,15 @@ desc:
 - Eternity is a minimalist Hugo theme
 - designed for portfolio sites with a fresh feel.
 ---
+```
+
+For landing page (_index.md), you can use `featuredTags` array to show some tags in Landing Page.
+```yaml
+featuredTags:
+  - title: people
+    image: https://source.unsplash.com/random?people&1649630128
+    url: /tags/people/
+  - title: nature
+    image: https://source.unsplash.com/random?nature&17346933
+    url: /tags/nature/
 ```

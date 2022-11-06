@@ -116,7 +116,6 @@ img.logo {
 
 .welcome-end {
     width: 100%;
-    position: absolute;
     padding: 20px;
     bottom: 0;
     text-align: center;
@@ -191,14 +190,22 @@ a img {
     width: 80%;
 }
 
+.navigate {
+    position: fixed;
+    bottom: 25px;
+    right: 100px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+
 .prev,
 .next {
     cursor: pointer;
-    position: fixed;
-    top: 50%;
-    width: auto;
-    margin: 16px;
-    margin-top: -50px;
     color: var(--main-light);
     font-weight: bold;
     font-size: 36px;
@@ -209,8 +216,7 @@ a img {
 }
 
 .next {
-    right: 0;
-    margin-right: 25px;
+    margin-left: 50px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -228,7 +234,6 @@ a img {
     display: grid;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
 }
 
 .fullheight {
@@ -299,6 +304,10 @@ section .column img {
     font-size: x-large;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -358,9 +367,9 @@ section .column img {
 
 .down-arrow {
     animation: jumpInfinite 3s infinite;
-    position: absolute;
+    position: fixed;
     top: calc(100vh - 100px);
-    right: 60px;
+    left: 60px;
 }
 
 .down-arrow:after {
@@ -375,6 +384,11 @@ section .column img {
     border-radius: 4px;
     transform: rotateZ(45deg);
     color: var(--grey);
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
 }
 
 @keyframes jumpInfinite {

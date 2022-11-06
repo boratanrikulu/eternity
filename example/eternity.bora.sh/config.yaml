@@ -34,9 +34,13 @@ params:
     - icon: 'fab fa-linkedin-in fa-lg'
       url: 'https://linkedin.bora.sh/in/eternity'
   homepage: "/work" # homepage link, mostly same with menu.main[0]
+  specialPages:
+    - work
+    - archive
   bypassWelcomePage: false # redirects "/" to "homepage" when it's true.
-  plausible: 'eternity.bora.sh' # todo: set your plausible id.
+  plausible: '' # todo: set your plausible id.
   disableRadius: false
+  moveIt: false  # Moves Title and Meta info down, only visible when scroll.
 
 markup:
   defaultMarkdownHandler: goldmark

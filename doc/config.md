@@ -72,6 +72,14 @@ params:
   homepage: "/work"
 ```
 
+You can change special page names.
+```yaml
+params:
+  specialPages:
+    - work
+    - archive
+```
+
 You can bypass welcome page if you want. It redirects "/" to "homepage".
 ```yaml
 params:
@@ -82,6 +90,12 @@ You can disable logo's radius with `disableRadius` variable.
 ```yaml
 params:
   disableRadius: true
+```
+
+You can move Title and Meta down, to show them only when scroll.  
+```yaml
+params:
+  moveIt: true
 ```
 
 You can use `menu.main` array to set your navbar links.
