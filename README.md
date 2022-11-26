@@ -37,8 +37,8 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**jwst.rocks**](https://jwst.rocks)  
   Basic website contains WEBB images.
 
-- [**jw.omg.lol**](https://jw.omg.lol)
-- A photographer website
+- [**jw.omg.lol**](https://jw.omg.lol)  
+  A photographer website.
 
 *Feel free to add your site here.*  
 
