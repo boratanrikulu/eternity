@@ -43,6 +43,9 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**davidbliss.art**](https://davidbliss.art/)  
   A drawings website.
 
+- [**tatjana-hodes.de**](https://tatjana-hodes.de)  
+  An artist website.
+
 *Feel free to add your site here.*  
 
 Note: If you're an artist who wants to host a website but doesn't have know how to, I can help you about technical questions for free. Just send an email to [**eternity@bora.sh**](mailto:eternity@bora.sh), I will assist you first.
