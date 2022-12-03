@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="enter">
 				<button onclick="window.location.href='{{ relref . .Site.Params.Homepage }}'"
-				class="button is-white is-large is-outlined">enter</button>
+				class="button is-white is-large is-outlined">{{ i18n "enter" | default "enter" }}</button>
 			</div>
 			{{ with .Params.FeaturedTags }}
 				<div class="columns is-mobile is-multiline">
