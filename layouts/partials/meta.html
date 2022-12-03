@@ -10,7 +10,12 @@
 <meta property="og:description" content="{{ default .Site.Params.Subtitle .Params.Subtitle }}" />
 <meta name="twitter:description" content="{{ default .Site.Params.Subtitle .Params.Subtitle }}" />
 <base href="{{ .RelPermalink }}">
-<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+{{ if .IsTranslated }}
+	{{ range .Translations }}
+	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+	{{ end }}
+{{ end }}
 <meta name="url" content="{{ .Permalink }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta name="twitter:url" content="{{ .Permalink }}" />
