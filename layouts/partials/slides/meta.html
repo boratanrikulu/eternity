@@ -10,7 +10,7 @@
                     {{ end }}
                     {{ range $i, $tag := $tags }}
                         {{ if not (in $specials $tag) }}
-                            <a class="grey" href={{ printf "tags/%s" $tag | absURL }}>#{{ $tag }}</a>
+                            <a class="grey" href={{ printf "tags/%s" $tag | absLangURL }}>#{{ $tag }}</a>
                         {{ end }}
                     {{ end }}
                 </div>
