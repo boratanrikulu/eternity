@@ -30,16 +30,7 @@
                             {{ $resizer = "1000x r270" }}
                         {{ end }}
                     {{ end }}
-                    {{ if and (eq $.type "desktop") (gt ($.scratch.Get "columnsCount") 2) }}
-                        {{ if gt $img.Width 1000 }}
-                            {{ $img = $img.Resize $resizer }}
-                        {{ end }}
-                    {{ end }}
-                    {{ if and (eq $.type "mobile") (gt ($.scratch.Get "columnsCount") 1) }}
-                        {{ if gt $img.Width 1000 }}
-                            {{ $img = $img.Resize $resizer }}
-                        {{ end }}
-                    {{ end }}
+                    {{ $img = $img.Resize $resizer }}
                     <div class="center">
                         <div class="image-box {{ if eq ($.scratch.Get "columnsCount") 1 }} alittle {{ end }}">
                             <img
