@@ -19,21 +19,19 @@
     <meta name="twitter:creator" content="{{ . }}" />
 {{ end }}
 {{ $img := slice }}
+{{ $scratch := newScratch }}
 {{ if .Params.images }}
-    {{ $scratch := newScratch }}
     {{ partial "helpers/get" (dict "scratch" $scratch "row" .Params ) }}
     {{ $img = $scratch.Get "img" }}
-    {{ $img = $img.Resize "1000x" }}
 {{ else if .Site.Params.image }}
-    {{ $scratch := newScratch }}
     {{ $row := dict "images" (slice .Site.Params.image) }}
     {{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
     {{ $img = $scratch.Get "img" }}
-    {{ $img = $img.Resize "1000x" }}
 {{ end }}
 {{ with $img }}
-    <meta itemprop="image" content="{{ .Permalink }}" />
-    <meta property="og:image" content="{{ .Permalink }}" />
-    <meta name="twitter:image" content="{{ .Permalink }}" />
+    {{ $i := .Fill "800x418 center png" }}
+    <meta itemprop="image" content="{{ $i.Permalink }}" />
+    <meta property="og:image" content="{{ $i.Permalink }}" />
+    <meta name="twitter:image" content="{{ $i.Permalink }}" />
 {{ end }}
 <meta property="og:locale" content="{{ .Language.Lang }}">
