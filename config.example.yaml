@@ -29,6 +29,7 @@ params:
   plausible: '' # todo: set your plausible id.
   disableRadius: false
   moveIt: false # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: true
 
 markup:
   defaultMarkdownHandler: goldmark

@@ -92,6 +92,12 @@ params:
   disableRadius: true
 ```
 
+You can disable resizing pictures on post pages.
+```yaml
+params:
+  disableAlwaysResize: true
+```
+
 You can move Title and Meta down, to show them only when scroll.  
 ```yaml
 params:
