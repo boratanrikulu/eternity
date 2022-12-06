@@ -87,7 +87,7 @@ nav.navbar {
     background-color: var(--dark);
     justify-content: people-between;
     align-items: center;
-    height: 6rem;
+    height: unset !important;
     margin-left: 2em;
     margin-right: 2em;
     padding-top: 1em;
