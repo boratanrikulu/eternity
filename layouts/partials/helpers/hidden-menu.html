@@ -1,14 +1,12 @@
 <div class="center hidden-menu">
     {{ $IsNavbarPage := false }}
-    {{ $currentPage := .Title }}
-    {{ range $i, $el := .Site.Menus.main }}
-        {{ if eq $currentPage $el.Name }}
-            {{ if not $IsNavbarPage }}
-                {{ $IsNavbarPage = true }}
-            {{ end }}
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        {{ if $currentPage.IsMenuCurrent "main" . }}
+            {{ $IsNavbarPage = true }}
         {{ end }}
     {{ end }}
     {{ if not $IsNavbarPage }}
-        <p>#{{ $currentPage }}</p>
+        <p>#{{ $currentPage.Title }}</p>
     {{ end }}
 </div>

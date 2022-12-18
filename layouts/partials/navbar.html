@@ -2,27 +2,41 @@
 {{ if .IsHome }}
     {{ $homeLink = "/" }}
 {{ end }}
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-start">
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
         <div class="logo">
             <a href={{ relref . $homeLink }}>
                 <img class="logo" src={{ "logo.png" | absURL }}>
             </a>
         </div>
     </div>
+    {{ if .IsTranslated }}
+        <div class="navbar-start">
+            {{ $lastIndex := sub (len .AllTranslations) 1 }}
+            {{ $currentLang := .Language }}
+            {{ range $i, $t := .AllTranslations }}
+            {{ $active := "" }}
+                {{ if eq $t.Language $currentLang }}
+                    {{ $active = "active" }}
+                {{ end }}
+                <a class="{{ $active }}" href="{{ $t.Permalink }}">{{ $t.Language.LanguageName }}</a>
+                {{ if ne $i $lastIndex }} | {{ end }}
+            {{ end}}
+        </div>
+    {{ end }}
     <div class="navbar-middle">
         <a class="a-clean" href={{ relref . $homeLink }}><p class="welcome-title">{{ .Site.Title }}</p></a>
         {{ if not .IsHome }}
             {{ if and .Site.Menus .Site.Menus.main }}
                 <div class="menu">
                     {{ $lastIndex := sub (len .Site.Menus.main) 1 }}
-                    {{ $currentPage := .RelPermalink }}
+                    {{ $currentPage := . }}
                     {{ range $i, $el := .Site.Menus.main }}
                         {{ $active := "" }}
-                        {{ if eq $el.URL $currentPage }}
+                        {{ if $currentPage.IsMenuCurrent "main" $el }}
                             {{ $active = "active" }}
                         {{ end }}
-                        <a class="{{ $active }}" href="{{ $el.URL }}">{{ $el.Name }}</a>
+                        <a class="{{ $active }}" href="{{ $el.URL | absLangURL }}">{{ i18n $el.Identifier | default $el.Name}}</a>
                         {{ if ne $i $lastIndex }} / {{ end }}
                     {{ end }}
                 </div>
