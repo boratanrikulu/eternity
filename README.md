@@ -37,9 +37,6 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**jwst.rocks**](https://jwst.rocks)  
   Basic website contains WEBB images.
 
-- [**jw.omg.lol**](https://jw.omg.lol)  
-  A photographer website.
-
 - [**davidbliss.art**](https://davidbliss.art/)  
   A drawings website.
 
