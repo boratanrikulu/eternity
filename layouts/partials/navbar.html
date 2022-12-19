@@ -37,7 +37,7 @@
             {{ end }}
             {{ range $el := $socials }}
                 <div class="social">
-                    <a href="{{ $el.url }}" target="_blank">
+                    <a href="{{ $el.url }}" {{ if $el.rel_me }} rel="me" {{ end }} target="_blank">
                         <i class="{{ $el.icon }}"></i>
                     </a>
                 </div>
