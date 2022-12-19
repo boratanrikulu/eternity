@@ -50,7 +50,12 @@ params:
         people: 1
 ```
 
-You can use `socials` array to set your social accounts. `icon` is font-awesome icon code. You can use `landing` variable to make icon invisible only for landing page but visible inside website.
+You can use `socials` array to set your social accounts.
+
+- `icon` is a font-awesome icon code.
+- `landing: true` makes an icon invisible on the landing page but visible inside website.
+- `rel_me: true` adds the HTML attribute `rel="me"` to the link. This is useful to verify the link to your Mastodon profile.
+
 ```yaml
 params:
   socials:
