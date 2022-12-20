@@ -1,0 +1,38 @@
+{{ $imgs := slice }}
+{{ range $i, $image := .ctx.Params.images }}
+	{{ $scratch := newScratch }}
+	{{ $row := dict "images" (slice $image) }}
+	{{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
+	{{ $imgs = $imgs | append ($scratch.Get "img") }}
+{{ end }}
+
+{{ $includesInfo := false }}
+{{ if or (and (gt (len $imgs) 1) (not .ctx.Params.multipleColumn)) (gt (len .ctx.Content) 0) }}
+	{{ $includesInfo = true }}
+{{ end }}
+<div class="slide" {{ if $includesInfo }} info="true" {{ end }} path="{{ $.ctx.Page.RelPermalink }}">
+	<div>
+		<div class="slide-imgs {{ if not $.disableFullheight }} fullheight {{end}}">
+			<div>
+				<div class="center">
+					<div class="slide-meta columns is-mobile">
+						{{ if not .ctx.Params.hideTitle }}
+							<div class="center column slide-meta-title">
+								<a href="{{ .ctx.Page.RelPermalink }}">{{ .ctx.Title }}</a>
+							</div>
+						{{ end }}
+					</div>
+				</div>
+				<div {{ if .ctx.Params.multipleColumn }} class="columns center" {{ end }}>
+					{{ range $i, $img := $imgs }}
+					<div {{ if $.ctx.Params.multipleColumn }} class="column" {{ end }}>
+						<a href="{{ $.ctx.Page.RelPermalink }}"><img src="{{ $img.RelPermalink }}" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" /></a>
+					</div>
+					{{ end }}
+				</div>
+				{{ partial "slides/meta" (dict "imgs" $imgs "ctx" .ctx) }}
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
