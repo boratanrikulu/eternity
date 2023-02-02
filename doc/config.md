@@ -91,6 +91,12 @@ params:
   bypassWelcomePage: true
 ```
 
+You can disable the background image on the welcome page.
+```yaml
+params:
+  disableWelcomePageBackground: false
+```
+
 You can disable logo's radius with `disableRadius` variable.
 ```yaml
 params:
@@ -103,7 +109,7 @@ params:
   disableAlwaysResize: true
 ```
 
-You can move Title and Meta down, to show them only when scroll.  
+You can move Title and Meta down, to show them only when scroll.
 ```yaml
 params:
   moveIt: true
