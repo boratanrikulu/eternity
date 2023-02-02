@@ -6,7 +6,7 @@
 </head>
 {{ else }}
 <section class="hero is-fullheight welcome"
-	style="background-image: url({{ "background.jpeg" | absURL }});">
+  {{ if not .Site.Params.DisableWelcomePageBackground }} style="background-image: url({{ "background.jpeg" | absURL }});" {{ end }}>
 	{{ partial "navbar.html" . }}
 	<div class="hero-body has-text-centered">
 		<div class="container">
