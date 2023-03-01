@@ -31,9 +31,6 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**emily5.com**](https://emily5.com)  
   A graphic designer website.
 
-- [**tulanikiara.me**](https://tulanikiara.me)  
-  A cartoonist and illustrator website.
-
 - [**jwst.rocks**](https://jwst.rocks)  
   Basic website contains WEBB images.
 
