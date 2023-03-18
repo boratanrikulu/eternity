@@ -22,7 +22,7 @@ url: work
 
 - Integrated **lazy load**.
 
-- Automaticly creates **resized** thumbnails.
+- Automatically creates **resized** thumbnails.
 
 - Shows **exif** if it exists.
 
