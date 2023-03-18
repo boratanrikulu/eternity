@@ -18,3 +18,8 @@ Create [**/static/css/width.css**](/static/css/width.css) in your repo to be abl
 ### Change font
 
 Create [**/layouts/partials/fonts.html**](/layouts/partials/fonts.html) in your repo to be able to change fonts.
+
+### Advanced customization
+
+Create [**/static/css/custom.css**](/static/css/custom.css) in your repo to be able to add or override CSS directives.
+
