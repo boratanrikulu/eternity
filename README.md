@@ -63,7 +63,7 @@ Note: If you're an artist who wants to host a website but doesn't have know how 
 
 - Integrated **lazy load**.
 
-- Automaticly creates **resized** thumbnails.
+- Automatically creates **resized** thumbnails.
 
 - Shows **exif** if it exists.
 
