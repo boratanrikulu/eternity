@@ -1,8 +1,8 @@
 ---
 weight: 8
 images:
-- https://source.unsplash.com/random?people&31676
-- https://source.unsplash.com/random?people&34512
+- https://source.unsplash.com/random?people&6480
+- https://source.unsplash.com/random?people&234121223
 multipleColumn: true
 title: people 8
 date: 2022-07-23

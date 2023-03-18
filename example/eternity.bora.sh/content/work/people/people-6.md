@@ -1,7 +1,7 @@
 ---
-weight: 6
+weight: 7
 images:
-- https://source.unsplash.com/random?people&13803
+- https://source.unsplash.com/random?people&30448
 title: people 6
 date: 2022-07-23
 tags:

@@ -1,10 +1,9 @@
 ---
 weight: 4
 images:
-- https://source.unsplash.com/random?people&112234
-- https://source.unsplash.com/random?people&12132658
+- https://source.unsplash.com/random?people&23003
+- https://source.unsplash.com/random?people&5023403
 title: people 4
-multipleColumn: true
 date: 2022-07-23
 tags:
 - work # homepage

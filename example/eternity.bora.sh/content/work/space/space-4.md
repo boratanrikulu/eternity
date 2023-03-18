@@ -5,7 +5,6 @@ images:
 title: galaxy 4
 date: 2022-07-23
 tags:
-- work # homepage
 - archive # all posts
 - space
 ---
