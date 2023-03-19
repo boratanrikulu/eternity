@@ -5,8 +5,7 @@
 	<meta http-equiv="refresh" content="0; URL={{ relref . .Site.Params.Homepage }}" />
 </head>
 {{ else }}
-<section class="hero is-fullheight welcome"
-  {{ if not .Site.Params.DisableWelcomePageBackground }} style="background-image: url({{ "background.jpeg" | absURL }});" {{ end }}>
+<section class="hero is-fullheight welcome {{ if not .Site.Params.DisableWelcomePageBackground }}welcome-image{{ end }}">
 	{{ partial "navbar.html" . }}
 	<div class="hero-body has-text-centered">
 		<div class="container">
