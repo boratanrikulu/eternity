@@ -33,13 +33,31 @@ date: 2022-07-24
 
 You can use multiple images by adding them to `images` array. Default view is `row`. But if you want to set them as `column`, you can use `multipleColumn` value. Both local images and remote images are supported. If you use remote image, it will be downloaded.
 
-
 ```yaml
 ---
 weight: 9
 images:
 - /images/my-image-1.jpg
 - /images/my-image-2.jpg
+multipleColumn: true
+title: Here's my first post!!
+tags:
+- work
+- first
+date: 2022-07-24
+---
+```
+
+You can also specify a caption or subtitle for each of your images. Use `captions`array in that case. It must match the length an order of `images` if used:
+```yaml
+---
+weight: 9
+images:
+- /images/my-image-1.jpg
+- /images/my-image-2.jpg
+captions:
+- Incredible view at Nowhere City
+- Nowhere City Lake
 multipleColumn: true
 title: Here's my first post!!
 tags:
