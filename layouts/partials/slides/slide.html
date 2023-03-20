@@ -8,7 +8,6 @@
 
 {{ $captions := slice }}
 {{ range $i, $caption := .ctx.Params.captions }}
-	{{ print $caption }}
 	{{ $captions = $captions | append ($caption) }}
 {{ end }}
 
