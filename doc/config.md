@@ -2,12 +2,13 @@
 
 Example config is here: [**config.yaml**](/config.example.yaml)
 
-You can use `title`, `subtitle` and `image` variables for your website. Same variables are available for post pages.
+You can use `title`, `subtitle`, `image` and `logo` variables for your website.  
 ```yaml
 title: Eternity
 params:
   subtitle: Eternity is a minimalist Hugo theme designed for portfolio sites with a fresh feel.
-  image: '/images/about.png`
+  image: '/images/about.png'
+  logo: 'logo.png'
 ```
 
 You can use `googleAnalytics` variable to set Analytics.
