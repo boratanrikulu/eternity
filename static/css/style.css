@@ -9,7 +9,7 @@
 }
 
 .welcome-image {
-    background: url("/background.jpeg");
+    background: url("../background.jpeg");
     background-size: cover;
     background-position: center;
     width: 100%;
