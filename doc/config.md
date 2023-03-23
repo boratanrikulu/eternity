@@ -2,7 +2,7 @@
 
 Example config is here: [**config.yaml**](/config.example.yaml)
 
-You can use `title`, `subtitle`, `image` and `logo` variables for your website. Same variables are available for post pages.
+You can use `title`, `subtitle`, `image` and `logo` variables for your website.  
 ```yaml
 title: Eternity
 params:
