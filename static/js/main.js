@@ -133,19 +133,14 @@ function processSwipe(touchStartX, touchEndX, touchStartY, touchEndY) {
     swipeLength = touchEndX - touchStartX;
     swipeVerticalLength = touchEndY - touchStartY;
 
-    //do nothing if vertical travel is high (diagonal swipe)
+    // do nothing if vertical travel is high (diagonal swipe)
     if(Math.abs(swipeVerticalLength) > 75) return;
-    //do nothing if small accidental swipe
+    // do nothing if small accidental swipe
     if(Math.abs(swipeLength) < 0.2 * window.innerWidth) return;
 
-
-    // swipe right
-    if(swipeLength > 0) {
+    if(swipeLength > 0) { // swipe right
         plusSlides(-1);
-    }
-
-    //swipe left
-    else if(swipeLength < 0) {
+    } else if(swipeLength < 0) { // swipe left
         plusSlides(+1);
     }
 }
