@@ -48,6 +48,9 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
   
 - [**zone.photos**](https://zone.photos)  
   A photographer website.
+  
+- [**thomaslaneart.com**](https://thomaslaneart.com)  
+  An artist website.
 
 *Feel free to add your site here.*  
 
