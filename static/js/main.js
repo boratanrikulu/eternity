@@ -24,11 +24,15 @@ function openSlider() {
     document.body.classList.add("noscroll");
     document.getElementById('slider').style.display = "grid";
     document.addEventListener('keydown', keyboardSlider);
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchend', handleTouchEnd);
 }
 
 function closeSlider() {
     document.getElementById('slider').style.display = "none";
     document.removeEventListener('keydown', keyboardSlider);
+    document.removeEventListener('touchstart', handleTouchStart);
+    document.removeEventListener('touchend', handleTouchEnd);
     if (history.replaceState) {
         history.replaceState({}, path, path);
     }
@@ -112,3 +116,31 @@ function checkArrow() {
 }
 
 checkArrow();
+
+function handleTouchStart(event) {
+    touchStartX = event.changedTouches[0].screenX;
+    touchStartY = event.changedTouches[0].screenY;
+}
+
+function handleTouchEnd(event) {
+    touchEndX = event.changedTouches[0].screenX;
+    touchEndY = event.changedTouches[0].screenY;
+    processSwipe(touchStartX, touchEndX, touchStartY, touchEndY);
+
+}
+
+function processSwipe(touchStartX, touchEndX, touchStartY, touchEndY) {
+    swipeLength = touchEndX - touchStartX;
+    swipeVerticalLength = touchEndY - touchStartY;
+
+    // do nothing if vertical travel is high (diagonal swipe)
+    if(Math.abs(swipeVerticalLength) > 75) return;
+    // do nothing if small accidental swipe
+    if(Math.abs(swipeLength) < 0.2 * window.innerWidth) return;
+
+    if(swipeLength > 0) { // swipe right
+        plusSlides(-1);
+    } else if(swipeLength < 0) { // swipe left
+        plusSlides(+1);
+    }
+}
