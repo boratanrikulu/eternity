@@ -48,10 +48,13 @@ date: 2022-07-24
 ---
 ```
 
-You can also specify a caption or subtitle for each of your images. Use `captions`array in that case. It must match the length an order of `images` if used:
+You can also specify a captions or subtitles for each of your images.
+If you want to subtitle the main image that opens the slide-show (that image works like a category or representative of the images you are setting on the images object), just add a "description" parameter, which is, by the way, totally optional.
+As for the subtitles of the other images, use `captions`array in that case. This is also optional, but it must match the length an order of `images` if used:
 ```yaml
 ---
 weight: 9
+description: Nowhere City Pictures
 images:
 - /images/my-image-1.jpg
 - /images/my-image-2.jpg

@@ -369,6 +369,14 @@ section .column img {
     text-align: center;
 }
 
+.category_caption {
+    background-color: var(--dark-light);
+    color: var(--white);
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
 /* Arrow */
 
 .down-arrow {
