@@ -31,9 +31,6 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**emily5.com**](https://emily5.com)  
   A graphic designer website.
 
-- [**jwst.rocks**](https://jwst.rocks)  
-  Basic website contains WEBB images.
-
 - [**davidbliss.art**](https://davidbliss.art/)  
   A drawings website.
 
@@ -51,6 +48,15 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
   
 - [**thomaslaneart.com**](https://thomaslaneart.com)  
   An artist website.
+
+- [**taschchen.art**](https://taschchen.art)  
+  An artist website.
+
+- [**www.michael-bolus.com**](https://www.michael-bolus.com/)  
+  A photographer website.
+
+- [**www.stndc.com**](https://www.stndc.com)  
+  A website about sound and music computing.
 
 *Feel free to add your site here.*  
 
