@@ -5,9 +5,6 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{{ if .Params.description }}
-	<meta name="description" content="{{ .Params.description }}">
-	{{ end }}
 	
 	{{ if and .Title (not .IsHome) }}
 		<title>{{ .Title }} {{ if .Params.Subtitle }}- {{ .Params.Subtitle }}{{else}}- {{ .Site.Title }}{{ end }}</title>
