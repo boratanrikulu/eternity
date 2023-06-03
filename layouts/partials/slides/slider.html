@@ -41,9 +41,9 @@
                                 height="{{ $img.Height }}"
                                 onclick="openSlider();currentSlide({{ (index $row "loopCount") }})"
                                 />
-                                {{ if (index $row "post").Params.description }}
+                                {{ if (index $row "post").Params.subtitle }}
                                 <figcaption class="category_caption">
-                                        {{ (index $row "post").Params.description }}
+                                        {{ (index $row "post").Params.subtitle }}
                                 </figcaption>
                                 {{ end }}
                             </figure>
