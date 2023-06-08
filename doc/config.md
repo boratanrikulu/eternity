@@ -98,6 +98,12 @@ params:
   disableWelcomePageBackground: false
 ```
 
+You can set the "enter" text button with `welcomePageButtonText`.
+```yaml
+params:
+  welcomePageButtonText: Entrar
+```
+
 You can disable logo's radius with `disableRadius` variable.
 ```yaml
 params:
