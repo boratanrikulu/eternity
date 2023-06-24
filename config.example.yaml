@@ -21,6 +21,7 @@ params:
     # todo: add your social accounts.
     - icon: 'far fa-envelope fa-lg'
       url: 'mailto:eternity@bora.sh'
+      label: 'Contact me'
       landing: true
   # homepage: "/work" # todo: uncomment homepage, homepage link is mostly same with menu.main[0]
   specialPages:
