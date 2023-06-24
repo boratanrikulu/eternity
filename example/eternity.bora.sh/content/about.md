@@ -45,7 +45,7 @@ hideDate: true
 
 3. Remove default config file.  
 	```shell
-	rm config.toml
+	rm hugo.toml
 	```  
 
 4. Submodule the theme.  

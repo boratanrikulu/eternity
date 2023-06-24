@@ -96,7 +96,7 @@ Note: If you're an artist who wants to host a website but doesn't have know how 
 
 3. Remove default config file.  
 	```shell
-	rm config.toml
+	rm hugo.toml
 	```  
 
 4. Submodule the theme.  
