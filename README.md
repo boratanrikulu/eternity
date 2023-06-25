@@ -96,8 +96,12 @@ Note: If you're an artist who wants to host a website but doesn't have know how 
 
 3. Remove default config file.  
 	```shell
+	rm hugo.toml
+	```
+	If you use an older version of Hugo ([< v0.110.0](https://github.com/gohugoio/hugo/issues/8979)), your config might be called differently:
+	```shell
 	rm config.toml
-	```  
+	```
 
 4. Submodule the theme.  
 	```shell
