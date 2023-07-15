@@ -29,6 +29,12 @@
                         {{ if eq .Tags.Orientation 6 }}
                             {{ $resizer = "1000x r270" }}
                         {{ end }}
+                        {{ if eq .Tags.Orientation 3 }}
+                            {{ $resizer = "1000x r180" }}
+                        {{ end }}
+                        {{ if eq .Tags.Orientation 8 }}
+                            {{ $resizer = "1000x r90" }}
+                        {{ end }}
                     {{ end }}
                     {{ $img = $img.Resize $resizer }}
                     <div class="center">
