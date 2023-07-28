@@ -11,6 +11,7 @@ params:
   copyright: All rights reserved. # todo: set your copyright type.
   author: Lovely Author # todo: set your full name.
   dontShowSource: false # please, do not do this :)
+  dontShowLogo: false # If you want to hide the logo, this is what you set to true
   portfolio:
     columns:
       desktop:
