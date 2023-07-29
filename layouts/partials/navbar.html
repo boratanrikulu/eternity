@@ -3,7 +3,7 @@
     {{ $homeLink = "/" }}
 {{ end }}
 <nav class="navbar" role="navigation" aria-label="main navigation">
-    {{if not .Site.Params.dontShowLogo }}
+    {{ if not .Site.Params.dontShowLogo }}
     <div class="navbar-start">
         <div class="logo">
             <a href={{ relref . $homeLink }}>
@@ -11,7 +11,7 @@
             </a>
         </div>
     </div>
-    {{end}}
+    {{ end }}
     <div class="navbar-middle">
         <a class="a-clean" href={{ relref . $homeLink }}><p class="welcome-title">{{ .Site.Title }}</p></a>
         {{ if not .IsHome }}
