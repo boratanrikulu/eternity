@@ -3,7 +3,7 @@
     {{ $homeLink = "/" }}
 {{ end }}
 <nav class="navbar" role="navigation" aria-label="main navigation">
-    {{ if not .Site.Params.dontShowLogo }}
+    {{ if not .Site.Params.DontShowLogo }}
     <div class="navbar-start">
         <div class="logo">
             <a href={{ relref . $homeLink }}>
