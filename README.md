@@ -58,9 +58,6 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**www.stndc.com**](https://www.stndc.com)  
   A website about sound and music computing.
 
-- [**magikjefotomaken.be**](https://magikjefotomaken.be/)  
-  A photographer website.
-
 - [**floragrh.com.ar**](https://floragrh.com.ar/)  
   An illustrator website.
 
@@ -78,6 +75,12 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 
 - [**neilstoddard.com**](https://neilstoddard.com/)  
   A photographer website.
+
+- [**rebeccacomas.com**](https://rebeccacomas.com/)  
+  A web/graphic designer website.
+
+- [**sophiacaro.com**](https://sophiacaro.com/about/)  
+  An artist website.
 
 *Feel free to add your site here.*  
 
