@@ -88,6 +88,11 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**chogo.photography**](https://chogo.photography/)  
   A photographer website. 
 
+- [**piacenza.us**](https://piacenza.us/)  
+  A photographer website.
+
+- [**rominamoyateatro.com**](https://rominamoyateatro.com/)  
+  An actress website.
 
 *Feel free to add your site here.*  
 
