@@ -33,6 +33,7 @@ params:
   disableRadius: false
   moveIt: false # Moves Title and Meta info down, only visible when scroll.
   disableAlwaysResize: false
+  hideHastagTitle: false # Hide '#tag' title on the top of the tag page
 
 markup:
   defaultMarkdownHandler: goldmark

@@ -110,6 +110,12 @@ params:
   disableAlwaysResize: true
 ```
 
+You can hide hashtag '#tag' title on tag pages.
+```yaml
+params:
+  hideHastagTitle: true
+```
+
 You can move Title and Meta down, to show them only when scroll.
 ```yaml
 params:
