@@ -55,9 +55,6 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
 - [**www.michael-bolus.com**](https://www.michael-bolus.com/)  
   A photographer website.
 
-- [**www.stndc.com**](https://www.stndc.com)  
-  A website about sound and music computing.
-
 - [**floragrh.com.ar**](https://floragrh.com.ar/)  
   An illustrator website.
 
@@ -95,8 +92,6 @@ https://user-images.githubusercontent.com/20258973/180658086-24069751-1e78-44ef-
   An actress website.
 
 *Feel free to add your site here.*  
-
-Note: If you're an artist who wants to host a website but doesn't have know how to, I can help you about technical questions for free. Just send an email to [**eternity@bora.sh**](mailto:eternity@bora.sh), I will assist you first.
 
 ### Features
 
