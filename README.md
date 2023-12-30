@@ -7,6 +7,15 @@
 	</p>
 </div>
 
+> [!WARNING]  
+> This project is currently not being actively maintained.  
+> Please do not create new issues on GitHub.  
+> If you **urgently** require assistance, reach out via email to [**eternity@bora.sh**](mailto:eternity@bora.sh).
+
+> [!IMPORTANT]  
+> If you are interested in taking over the maintenance of this project, please get in touch.  
+> Your support would be greatly appreciated!
+
 ### Demo
 
 Website: [eternity.bora.sh](https://eternity.bora.sh)
@@ -177,4 +186,4 @@ cd themes/eternity && git pull && cd -
 
 ### Contact
 
-If you need to contact us for any reason; create an [**issue**](https://github.com/boratanrikulu/eternity/issues/new) or send a mail to [**eternity@bora.sh**](mailto:eternity@bora.sh).
+If you need to contact us for any reason; send a mail to [**eternity@bora.sh**](mailto:eternity@bora.sh).
