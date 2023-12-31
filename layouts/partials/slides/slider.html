@@ -20,9 +20,10 @@
         <div class="column">
             {{ $column := ($.scratch.Get (printf "%d" $index)) }}
             {{ range $row := $column }}
-                {{ if (index $row "post").Params.images }}
+                {{ $post := (index $row "post").Params}}
+                {{ if $post.images }}
                     {{ $scratch := newScratch }}
-                    {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
+                    {{ partial "helpers/get" (dict "scratch" $scratch "row" $post) }}
                     {{ $img := $scratch.Get "img" }}
                     {{ $resizer := "1000x r0" }}
                     {{ with $img.Exif }}
@@ -45,6 +46,7 @@
                             width="{{ $img.Width }}"
                             height="{{ $img.Height }}"
                             onclick="openSlider();currentSlide({{ (index $row "loopCount") }})"
+                            alt="{{$post.title}}"
                             />
                         </div>
                     </div>

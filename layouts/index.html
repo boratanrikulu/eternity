@@ -25,7 +25,7 @@
 									{{ partial "helpers/get" (dict "scratch" $scratch "row" $row) }}
 									{{ $image := $scratch.Get "img" }}
 									{{ with $image }}
-									<img src="{{ $image.RelPermalink }}" loading="lazy" />
+									<img src="{{ $image.RelPermalink }}" loading="lazy" alt="{{ .title }}"/>
 									{{end}}
 								</div>
 								<p>{{ .title }}</p>

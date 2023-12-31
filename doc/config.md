@@ -66,10 +66,13 @@ params:
     - icon: 'fab fa-github fa-lg'
       url: 'https://github.com/boratanrikulu/eternity'
       landing: true
+      label: 'Github'
     - icon: 'fab fa-instagram fa-lg'
       url: 'https://instagram.bora.sh/eternity'
+      label: 'Instagram'
     - icon: 'fab fa-linkedin-in fa-lg'
       url: 'https://linkedin.bora.sh/in/eternity'
+      label: 'Linkedin'
 ```
 
 You can change `homepage` link.

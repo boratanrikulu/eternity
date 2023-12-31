@@ -7,7 +7,7 @@
     <div class="navbar-start">
         <div class="logo">
             <a href={{ relref . $homeLink }}>
-                <img class="logo" src={{ .Site.Params.logo | absURL }}>
+                <img class="logo" alt="logo" src={{ .Site.Params.logo | absURL }}>
             </a>
         </div>
     </div>
@@ -39,7 +39,7 @@
             {{ end }}
             {{ range $el := $socials }}
                 <div class="social">
-                    <a href="{{ $el.url }}" {{ if $el.rel_me }} rel="me" {{ end }} target="_blank">
+                    <a href="{{ $el.url }}" {{ if $el.rel_me }} rel="me" {{ end }} {{ if $el.label }} aria-label="{{ $el.label }}" {{ end }} target="_blank">
                         <i class="{{ $el.icon }}"></i>
                     </a>
                 </div>
