@@ -20,9 +20,17 @@
         <div class="column">
             {{ $column := ($.scratch.Get (printf "%d" $index)) }}
             {{ range $row := $column }}
-                {{ if (index $row "post").Params.images }}
+                {{ if or ((index $row "post").Params.images) ((index $row "post").Resources.ByType "image") }}
                     {{ $scratch := newScratch }}
-                    {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
+                    {{ if ((index $row "post").Params.images) }}
+                        {{ partial "helpers/get" (dict "scratch" $scratch "row" (index $row "post").Params) }}
+                    {{ else }}
+                        {{ $scratch.Set "img" (index ((index $row "post").Resources.ByType "image") 0) }}
+                        {{ if (index $row "post").Params.mainImage }}
+                            {{ $scratch.Set "img" ((index $row "post").Resources.GetMatch (index $row "post").Params.mainImage) }}
+                        {{ end }}
+                    {{ end }}
+
                     {{ $img := $scratch.Get "img" }}
                     {{ $resizer := "1000x r0" }}
                     {{ with $img.Exif }}

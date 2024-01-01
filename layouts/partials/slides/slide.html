@@ -6,6 +6,15 @@
 	{{ $imgs = $imgs | append ($scratch.Get "img") }}
 {{ end }}
 
+{{ with .ctx.Resources.ByType "image" }}
+{{ range . }}
+	{{ $scratch := newScratch }}
+	{{ $row := dict "images" (slice .RelPermalink) }}
+    {{ $scratch.Set "img" (.) }}
+	{{ $imgs = $imgs | append ($scratch.Get "img") }}
+{{ end }}
+{{ end }}
+
 {{ $includesInfo := false }}
 {{ if or (and (gt (len $imgs) 1) (not .ctx.Params.multipleColumn)) (gt (len .ctx.Content) 0) }}
 	{{ $includesInfo = true }}
