@@ -6,7 +6,10 @@
 /* WELCOME */
 
 .welcome {
-    /* background-image: url("/background.jpeg"); It was moved to inline css. */
+}
+
+.welcome-image {
+    background: url("../background.jpeg");
     background-size: cover;
     background-position: center;
     width: 100%;
