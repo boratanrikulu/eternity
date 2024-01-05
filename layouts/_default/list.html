@@ -1,17 +1,22 @@
 {{ $portfolioScratch := newScratch }}
 {{ $portfolioMobileScratch := newScratch }}
+{{ $hideHastagTitle := .Site.Params.hideHastagTitle }}
 {{ partial "slides/columns" (dict  "portfolioScratch" $portfolioScratch "portfolioMobileScratch" $portfolioMobileScratch "ctx" .) }}
 
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
 <section id="desktop" class="section work">
-	{{ partial "helpers/hidden-menu.html" . }}
+	{{ if not $hideHastagTitle }}
+		{{ partial "helpers/hidden-menu.html" . }}
+	{{ end }}
 	{{ partial "slides/slider" (dict "scratch" $portfolioScratch "type" "desktop" "ctx" .) }}
 </section>
 
 <section id="mobile" class="section work">
-	{{ partial "helpers/hidden-menu.html" . }}
+	{{ if not $hideHastagTitle }}
+		{{ partial "helpers/hidden-menu.html" . }}
+	{{ end }}
 	{{ partial "slides/slider" (dict "scratch" $portfolioMobileScratch "type" "mobile" "ctx" .) }}
 </section>
 
