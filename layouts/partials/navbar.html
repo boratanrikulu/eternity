@@ -18,13 +18,13 @@
             {{ if and .Site.Menus .Site.Menus.main }}
                 <div class="menu">
                     {{ $lastIndex := sub (len .Site.Menus.main) 1 }}
-                    {{ $currentPage := .RelPermalink }}
+                    {{ $currentPage := . }}
                     {{ range $i, $el := .Site.Menus.main }}
                         {{ $active := "" }}
-                        {{ if eq $el.URL $currentPage }}
+                        {{ if $currentPage.IsMenuCurrent "main" $el }}
                             {{ $active = "active" }}
                         {{ end }}
-                        <a class="{{ $active }}" href="{{ $el.URL }}">{{ $el.Name }}</a>
+                        <a class="{{ $active }}" href="{{ $el.URL | absLangURL }}">{{ i18n $el.Identifier | default $el.Name}}</a>
                         {{ if ne $i $lastIndex }} / {{ end }}
                     {{ end }}
                 </div>

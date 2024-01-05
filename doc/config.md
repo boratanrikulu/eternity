@@ -121,18 +121,18 @@ You can use `menu.main` array to set your navbar links.
 menu:
   main:
     - name: work
-      url: /work/
+      pageref: /work
       weight: 1
     - name: people
-      url: /tags/people/
+      pageref: /tags/people
       weight: 2
     - name: nature
-      url: /tags/nature/
+      pageref: /tags/nature
       weight: 3
     - name: archive
-      url: /tags/archive/
+      pageref: /tags/archive
       weight: 4
     - name: about
-      url: /about/
+      pageref: /about
       weight: 5
 ```

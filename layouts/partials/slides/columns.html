@@ -20,7 +20,8 @@
 <!-- desktop columns -->
 {{ $columnsCount := 0 }}
 {{ if .ctx.Site.Params.portfolio.columns.desktop }}
-	{{ $columnsCount = index .ctx.Site.Params.portfolio.columns.desktop .ctx.Params.Title }}
+	{{ $pageref := .ctx.Params.Translationkey | default .ctx.Params.Title }}
+	{{ $columnsCount = index .ctx.Site.Params.portfolio.columns.desktop $pageref }}
 {{ end }}
 {{ if not $columnsCount }}
 	{{ if .ctx.Site.Params.portfolio.columns.desktop }}
@@ -34,7 +35,8 @@
 
 {{ $posts := slice }}
 {{ if .ctx.Site.Taxonomies.tags }}
-	{{ $posts = index .ctx.Site.Taxonomies.tags .ctx.Params.Title }}
+	{{ $tag := .ctx.Params.Translationkey | default .ctx.Params.Title }}
+	{{ $posts = index .ctx.Site.Taxonomies.tags $tag }}
 	{{ $posts = sort $posts ".Params.weight" "desc" }}
 {{ end }}
 
@@ -66,7 +68,8 @@
 <!-- mobile columns -->
 {{ $mobileColumnsCount := 0 }}
 {{ if .ctx.Site.Params.portfolio.columns.mobile }}
-	{{ $mobileColumnsCount = index .ctx.Site.Params.portfolio.columns.mobile .ctx.Params.Title }}
+	{{ $pageref := .ctx.Params.Translationkey | default .ctx.Params.Title }}
+	{{ $mobileColumnsCount = index .ctx.Site.Params.portfolio.columns.mobile $pageref }}
 {{ end }}
 {{ if not $mobileColumnsCount }}
 	{{ if .ctx.Site.Params.portfolio.columns.mobile }}
