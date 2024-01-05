@@ -6,6 +6,12 @@
 	{{ $imgs = $imgs | append ($scratch.Get "img") }}
 {{ end }}
 
+{{ $captions := slice }}
+{{ range $i, $caption := .ctx.Params.captions }}
+	{{ $captions = $captions | append ($caption) }}
+{{ end }}
+
+
 {{ $includesInfo := false }}
 {{ if or (and (gt (len $imgs) 1) (not .ctx.Params.multipleColumn)) (gt (len .ctx.Content) 0) }}
 	{{ $includesInfo = true }}
@@ -39,7 +45,10 @@
 							{{ $img = $img.Resize $resizer }}
 						{{ end  }}
 						<div {{ if $.ctx.Params.multipleColumn }} class="column" {{ end }}>
-							<img src="{{ $img.RelPermalink }}" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" />
+							<figure>
+								<img src="{{ $img.RelPermalink }}" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" />
+								<figcaption class="caption">{{ index $captions $i }}</figcaption>
+							</figure>
 						</div>
 					{{ end }}
 				</div>

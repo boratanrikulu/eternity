@@ -363,6 +363,20 @@ section .column img {
     margin-left: 5px;
 }
 
+.caption {
+    font-style: italic;
+    padding: 6px;
+    text-align: center;
+}
+
+.category_caption {
+    background-color: var(--dark-light);
+    color: var(--white);
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
 /* Arrow */
 
 .down-arrow {
